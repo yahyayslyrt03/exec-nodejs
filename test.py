@@ -6,7 +6,7 @@ from system.config import find_value
 username = find_value('system/username')
 password = find_value('system/password')
 test_commands = [
-    "commandlinewillbechanged",
+    "ls",
     "pwd",
     "usage",
     "wifi connect asd asd",
@@ -37,4 +37,5 @@ while(login_flag):
         print("System will be shutdown")
         print("\033[93mRESULT: {}/{} Success Test\033[0m".format(success,len(test_commands)))
         dev.gooz_thread.exit_flag = 1
+        breaklag = 1
         break
